@@ -28,7 +28,7 @@ resource "aws_acm_certificate" "import-cert" {
 }
 
 resource "aws_acm_certificate" "cert" {
-  count = var.enable && var.enable_aws_certificate ? 1 : 0
+  count             = var.enable && var.enable_aws_certificate ? 1 : 0
   private_key       = file("${path.module}/private-key.pem")
   certificate_body  = file("${path.module}/certificate.pem")
   certificate_chain = file("${path.module}/certificate-chain.pem")

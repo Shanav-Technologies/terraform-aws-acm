@@ -115,10 +115,8 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 | <a name="input_private_key"></a> [private\_key](#input\_private\_key) | Path of private key. | `string` | `""` | no |
 | <a name="input_private_zone"></a> [private\_zone](#input\_private\_zone) | Used with name field to get a private Hosted Zone. | `bool` | `false` | no |
 | <a name="input_repository"></a> [repository](#input\_repository) | Terraform current module repo | `string` | `""` | no |
-| <a name="input_subject_alternative_names"></a> [subject\_alternative\_names](#input\_subject\_alternative\_names) | Set of domains that should be SANs in the issued certificate. To remove all elements of a previously configured list, set this value equal to an empty list ([]) or use the terraform taint command to trigger recreation. | `list(any)` | `[]` | no |
 | <a name="input_ttl"></a> [ttl](#input\_ttl) | Time to live. | `number` | `600` | no |
 | <a name="input_validate_certificate"></a> [validate\_certificate](#input\_validate\_certificate) | Set to false to prevent the validation of a acm certificate. | `bool` | `false` | no |
-| <a name="input_validation_method"></a> [validation\_method](#input\_validation\_method) | Which method to use for validation, DNS or EMAIL. | `string` | `"DNS"` | no |
 | <a name="input_validation_option"></a> [validation\_option](#input\_validation\_option) | The domain name that you want ACM to use to send you validation emails. This domain name is the suffix of the email addresses that you want ACM to use. | `any` | `{}` | no |
 | <a name="input_validation_record_fqdns"></a> [validation\_record\_fqdns](#input\_validation\_record\_fqdns) | When validation is set to DNS and the DNS validation records are set externally, provide the fqdns for the validation | `list(string)` | `[]` | no |
 
