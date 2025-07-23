@@ -26,7 +26,7 @@ variable "label_order" {
 
 variable "managedby" {
   type        = string
-  default     = ""
+  default     = "shanav-tech"
   description = "ManagedBy, eg 'shanav-tech'"
 }
 
