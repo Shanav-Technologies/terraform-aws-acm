@@ -8,6 +8,6 @@ module "acm" {
   environment               = "test"
   validate_certificate      = false
   domain_name               = ""
-  subject_alternative_names = ["Shanav-Technologies"]
+  subject_alternative_names = ["navneetbishnoi"]
   validation_method         = "EMAIL"
 }

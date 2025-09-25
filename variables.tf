@@ -26,8 +26,8 @@ variable "label_order" {
 
 variable "managedby" {
   type        = string
-  default     = "Shanav-Technologies"
-  description = "ManagedBy, eg 'Shanav-Technologies'"
+  default     = "navneetbishnoi"
+  description = "ManagedBy, eg 'navneetbishnoi'"
 }
 
 # Module      : ACM CERTIFICATE

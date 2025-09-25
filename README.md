@@ -21,10 +21,10 @@ To use this module, you can include it in your Terraform configuration. Here's a
 
 ```hcl
 module "acm" {
-  source                    = "git::https://github.com/Shanav-Technologies/terraform-aws-acm.git?ref=v1.0.0"
+  source                    = "git::https://github.com/navneetbishnoi/terraform-aws-acm.git?ref=v1.0.0"
   name                      = "certificate"
   environment               = "test"
-  domain_name               = "Shanav-Technologies.com"
+  domain_name               = "navneetbishnoi.com"
   subject_alternative_names = ["*.${local.domain}", "www.${local.domain}"]
 }
 ```
@@ -32,12 +32,12 @@ module "acm" {
 ## Example: generate-certificate-email
 ```hcl
 module "acm" {
-  source                    = "git::https://github.com/Shanav-Technologies/terraform-aws-acm.git?ref=v1.0.0"
+  source                    = "git::https://github.com/navneetbishnoi/terraform-aws-acm.git?ref=v1.0.0"
   name                      = "certificate"
   environment               = "test"
   validate_certificate      = false
-  domain_name               = "Shanav-Technologies.com"
-  subject_alternative_names = ["www.Shanav-Technologies.com"]
+  domain_name               = "navneetbishnoi.com"
+  subject_alternative_names = ["www.navneetbishnoi.com"]
   validation_method         = "EMAIL"
 }
 ```
@@ -45,24 +45,24 @@ module "acm" {
 ## Example: import-certificate
 ```hcl
 module "acm" {
-  source             = "git::https://github.com/Shanav-Technologies/terraform-aws-acm.git?ref=v1.0.0"
+  source             = "git::https://github.com/navneetbishnoi/terraform-aws-acm.git?ref=v1.0.0"
   name               = "certificate"
   environment        = "test"
   import_certificate = true
-  private_key        = "./../../../Shanav-Technologies-private-key.pem"
-  certificate_body   = "./../../../Shanav-Technologies-cert.pem"
-  certificate_chain  = "./../../../Shanav-Technologies-chain.crt"
+  private_key        = "./../../../navneetbishnoi-private-key.pem"
+  certificate_body   = "./../../../navneetbishnoi-cert.pem"
+  certificate_chain  = "./../../../navneetbishnoi-chain.crt"
 }
 ```
 
 ## Example
-For detailed examples on how to use this module, please refer to the [example](https://github.com/Shanav-Technologies/terraform-aws-acm/tree/main/_example) directory within this repository.
+For detailed examples on how to use this module, please refer to the [example](https://github.com/navneetbishnoi/terraform-aws-acm/tree/main/_example) directory within this repository.
 
 ## Author
 Your Name Replace '[License Name]' and '[Your Name]' with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/Shanav-Technologies/terraform-aws-acm/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/navneetbishnoi/terraform-aws-acm/blob/main/LICENSE) file for details.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
@@ -110,7 +110,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 | <a name="input_environment"></a> [environment](#input\_environment) | Environment (e.g. `prod`, `dev`, `staging`). | `string` | `""` | no |
 | <a name="input_import_certificate"></a> [import\_certificate](#input\_import\_certificate) | Set to true or false to decide the creation and import of a acm certificate. | `bool` | `false` | no |
 | <a name="input_label_order"></a> [label\_order](#input\_label\_order) | Label order, e.g. `name`,`application`. | `list(any)` | <pre>[<br>  "name",<br>  "environment"<br>]</pre> | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'Shanav-Technologies' | `string` | `"Shanav-Technologies"` | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'navneetbishnoi' | `string` | `"navneetbishnoi"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name  (e.g. `app` or `cluster`). | `string` | `""` | no |
 | <a name="input_private_key"></a> [private\_key](#input\_private\_key) | Path of private key. | `string` | `""` | no |
 | <a name="input_private_zone"></a> [private\_zone](#input\_private\_zone) | Used with name field to get a private Hosted Zone. | `bool` | `false` | no |
